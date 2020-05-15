@@ -1,0 +1,12 @@
+.responsive {
+  width: auto;
+  height: auto;
+}
+@media only screen and (min-width: 700) {
+  .responsive {
+    width: 60%;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+  }
+}

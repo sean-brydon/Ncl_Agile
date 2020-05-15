@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { UncontrolledCarousel } from "reactstrap";
-
+import "./Carousel.css";
 function Carousel(props) {
   const [items, setitems] = useState({});
   const [loading, setLoading] = useState(true);
@@ -9,7 +9,7 @@ function Carousel(props) {
     const array = [];
 
     props.data.forEach((currentItem, index) => {
-      if (index >= 3) return;
+      if (index >= 2) return;
       array.push({
         src: currentItem.image,
         altText: "#1",
@@ -21,11 +21,13 @@ function Carousel(props) {
   }, [props.data]);
 
   return (
-    <div className="h-50">
+    <div className="responsive">
       {loading ? (
         "Loading..."
       ) : (
-        <UncontrolledCarousel className="carousel" items={items} />
+        <div className="container">
+          <UncontrolledCarousel items={items} />
+        </div>
       )}
     </div>
   );

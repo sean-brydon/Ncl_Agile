@@ -25,7 +25,9 @@ $statement = <<<EOS
         ('2', 'Black Panther', '13', '7.3',
          'T\'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country\'s past.', 
          'https://images.hdqwalls.com/download/black-panther-10k-poster-dl-1280x720.jpg', 
-         'action');
+         'action'),
+        ('3','Joker','13','8.5','In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJKLiEyyz1Q9RC8EBYl3ijr3nuGeyO2ETmwy6Kdq0AQtD0elWD','action');
 
 EOS;
 try {

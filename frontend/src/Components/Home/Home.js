@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Carousel from "./Carousel/Carousel";
 import axios from "axios";
+import Tabs from "../GenreSelection/Tabs";
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState(null);
@@ -21,6 +22,7 @@ function Home() {
   return (
     <div>
       {isLoading ? <h1>Loading...</h1> : <Carousel data={data}></Carousel>}
+      {isLoading ? "" : <Tabs data={data} />}
     </div>
   );
 }

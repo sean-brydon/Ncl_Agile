@@ -24,12 +24,12 @@ function NavBar() {
             <NavLink href="/Home/">Home</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://github.com/reactstrap/reactstrap">
+            <NavLink href="https://github.com/sean-brydon/Ncl_Agile">
               GitHub
             </NavLink>
           </NavItem>
         </Nav>
-        <NavbarText>Simple Text</NavbarText>
+        <NavbarText>Agile Project</NavbarText>
       </Collapse>
     </Navbar>
   );
