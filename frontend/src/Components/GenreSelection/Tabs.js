@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { TabContent, TabPane, Nav, NavItem, NavLink } from "reactstrap";
 import classnames from "classnames";
+import "../MovieCards/movieCard.css";
 
 import MovieCard from "../MovieCards/MovieCard";
 
@@ -85,18 +86,42 @@ const Tabs = (props) => {
           </NavLink>
         </NavItem>
       </Nav>
-      <TabContent activeTab={activeTab}>
+      <TabContent activeTab={activeTab} className="mt-3 container">
         <TabPane tabId="1">
-          <div className="container mt-3">
+          <div className="cards">
             <MovieCard data={props.data} />
           </div>
         </TabPane>
-        <TabPane tabId="2"></TabPane>
-        <TabPane tabId="3"></TabPane>
-        <TabPane tabId="4"></TabPane>
-        <TabPane tabId="5"></TabPane>
-        <TabPane tabId="6"></TabPane>
-        <TabPane tabId="7"></TabPane>
+        <TabPane tabId="2">
+          <div className="cards">
+            <MovieCard data={props.data} filter="action" />
+          </div>
+        </TabPane>
+        <TabPane tabId="3">
+          <div className="cards">
+            <MovieCard data={props.data} filter="adventure" />
+          </div>
+        </TabPane>
+        <TabPane tabId="4">
+          <div className="cards">
+            <MovieCard data={props.data} filter="crime" />
+          </div>
+        </TabPane>
+        <TabPane tabId="5">
+          <div className="cards">
+            <MovieCard data={props.data} filter="drama" />
+          </div>
+        </TabPane>
+        <TabPane tabId="6">
+          <div className="cards">
+            <MovieCard data={props.data} filter="fantasy" />
+          </div>
+        </TabPane>
+        <TabPane tabId="7">
+          <div className="cards">
+            <MovieCard data={props.data} filter="horror" />
+          </div>
+        </TabPane>
       </TabContent>
     </div>
   );

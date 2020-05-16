@@ -1,4 +1,31 @@
 .image {
   width: 280px;
-  height: 380;
+  height: auto;
+}
+
+/* .card {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  width: 300px;
+  height: auto;
+} */
+
+.cards {
+  max-width: 1200px;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 800px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1080px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
