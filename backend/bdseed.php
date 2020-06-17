@@ -1,6 +1,7 @@
 <?php
 require 'bootstrap.php';
-
+// Run to populate DB. Usefull when testing CRUD
+// Saves writing manual SQL each time
 $statement = <<<EOS
     CREATE TABLE `moviedatabase`.`movies` 
         ( `id` INT NOT NULL AUTO_INCREMENT , 

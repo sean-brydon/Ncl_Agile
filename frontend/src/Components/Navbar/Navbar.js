@@ -12,7 +12,7 @@ import {
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-
+  //Toggles if the navbar is open or not (used with in xs-sm-md resolutions)
   const toggle = () => setIsOpen(!isOpen);
   return (
     <Navbar color="light" light expand="md">

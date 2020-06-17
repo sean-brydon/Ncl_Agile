@@ -8,6 +8,8 @@ import {
   Redirect,
 } from "react-router-dom";
 import Home from "./Components/Home/Home";
+// Component based layout -> Easily organises HTML code
+// Displays hierarchical code first
 function App() {
   return (
     <React.Fragment>

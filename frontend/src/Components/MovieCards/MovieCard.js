@@ -26,8 +26,9 @@ function MovieCard(props) {
       setisLoading(false);
     }
   }, []);
+  //Loading display loading sign
   if (isLoading) return <h1>Loading movies...</h1>;
-
+  //Loops through all filtered data (map returns an array)
   return filteredData.map((currentMovie, index) => {
     return (
       <Card key={index}>

@@ -4,6 +4,9 @@ import "./Carousel.css";
 function Carousel(props) {
   const [items, setitems] = useState({});
   const [loading, setLoading] = useState(true);
+  // Use effect runs only when something in the second callback is changed in this case [props.data] -> if data changes
+
+  // The carousell will re-render
   useEffect(() => {
     setLoading(true);
     const array = [];

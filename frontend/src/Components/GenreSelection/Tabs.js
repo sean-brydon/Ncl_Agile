@@ -4,7 +4,7 @@ import classnames from "classnames";
 import "../MovieCards/movieCard.css";
 
 import MovieCard from "../MovieCards/MovieCard";
-
+// Using class names to allow conditional statements within class -> Allowing us to easily create a tab system that has little to no css involved
 const Tabs = (props) => {
   const [activeTab, setActiveTab] = useState("1");
 

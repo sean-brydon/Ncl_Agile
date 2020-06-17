@@ -3,7 +3,7 @@
 namespace Src\Controller;
 
 use Src\Gateway\MovieGateway;
-
+// Creates a movie controller class
 class MovieController
 {
 
@@ -12,6 +12,7 @@ class MovieController
     private $genre;
 
     private $movieGateway;
+    //Creates a constructor for DB,Requestmethod and the genre of the movie
 
     public function __construct($db, $requestMethod, $genre)
     {
@@ -25,12 +26,15 @@ class MovieController
     {
         switch ($this->requestMethod) {
             case 'GET':
+                //Allows us to get a movie by specific genre(not sure if this is going to be handled this way in the frontend-> Pointless API calls)
                 if ($this->genre) {
                     $response = $this->getMovie($this->genre);
                 } else {
+                    // Returns all movies calls getAllMovies
                     $response = $this->getAllMovies();
                 };
                 break;
+            //WIP Implement in the future
             case 'POST':
                 $response = $this->createMovie();
                 break;
@@ -44,6 +48,8 @@ class MovieController
                 $response = $this->notFoundResponse();
                 break;
         }
+
+        //Returns the body of the request
         header($response['status_code_header']);
         if ($response['body']) {
             echo $response['body'];
@@ -52,6 +58,7 @@ class MovieController
 
     private function getAllMovies()
     {
+        // Cales findAll on the movieGateway class and returns the response
         $result = $this->movieGateway->findAll();
         $response['status_code_header'] = 'HTTP/1.1 200 OK';
         $response['body'] = json_encode($result);
@@ -111,6 +118,7 @@ class MovieController
         return $response;
     }
 
+    //Returns a 404 
     private function notFoundResponse()
     {
         $response['status_code_header'] = 'HTTP/1.1 404 Not Found';

@@ -5,7 +5,8 @@ import Tabs from "../GenreSelection/Tabs";
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState(null);
-
+  // Using axios for a promised base API call
+  // Could use fetch however, axios allows the use of promises and is alot easier to check for errors than using callbacks within fetch
   useEffect(() => {
     setIsLoading(true);
     axios
@@ -18,7 +19,7 @@ function Home() {
         throw err;
       });
   }, []);
-
+  // Display movies based on loading status
   return (
     <div>
       {isLoading ? <h1>Loading...</h1> : <Carousel data={data}></Carousel>}

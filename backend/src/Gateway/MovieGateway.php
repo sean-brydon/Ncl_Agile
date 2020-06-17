@@ -11,7 +11,7 @@ class MovieGateway
         $this->db = $db;
     }
 
-
+    // SQL for selecting all movies
     public function findAll()
     {
         $sqlQuery = "
@@ -26,7 +26,7 @@ class MovieGateway
         }
     }
 
-
+    // TODO: Allow admin to insert users
     public function insert(array $input)
     {
         $statement = "
